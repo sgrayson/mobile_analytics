@@ -13,6 +13,51 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <build>
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+  </build>
+
+  <repositories>
+    <repository>
+        <id>maven.scale7.org</id>
+        <name>Scale7 Maven Repo</name>
+        <url>https://github.com/s7/mvnrepo/raw/master</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+  		<id>clojars.org</id>
+  		<url>http://clojars.org/repo</url>
+	</repository>
+	<repository>
+	    <id>central</id>
+	    <name>Maven Repository Switchboard</name>
+	    <layout>default</layout>
+	    <url>http://repo1.maven.org/maven2</url>
+	    <snapshots>
+	      <enabled>false</enabled>
+	    </snapshots>
+	</repository>
+	<repository>
+	    <id>sonatype-releases</id>
+	    <name>Sonatype Releases Repository</name>
+	    <url>http://oss.sonatype.org/content/repositories/releases/</url>
+	</repository>
+  </repositories>
 
   <dependencies>
     <dependency>
